@@ -4,7 +4,7 @@ alph = {" ":"0","a":"1","b":"2","c":"3","d":"4","e":"5","f":"6","g":"7","h":"8",
 
 class encryptor:
     def __init__(self,shift=9): #contains all global values
-        self.spaw = []
+        self.sp_ = []
         self.shift = shift
 
     def actuallyEncrypt(self,lisT): #encrypts each letter
@@ -14,19 +14,19 @@ class encryptor:
             numbers.append(letter+".")
         return numbers
     def joiN(self,lisT): #joins list values into one string
-        spaw = ''
-        spaw = spaw.join(lisT)
-        return spaw
+        sp_ = ''
+        sp_ = sp_.join(lisT)
+        return sp_
     
     def encrypt(self,message=None): #main function run
-        spaw = self.spaw
+        sp_ = self.sp_
         for letter in message:
             letter = alph[letter]
-            spaw.append(letter)
+            sp_.append(letter)
 
-        spaw = self.actuallyEncrypt(spaw)
-        spaw = self.joiN(spaw)
-        return spaw
+        sp_ = self.actuallyEncrypt(sp_)
+        sp_ = self.joiN(sp_)
+        return sp_
 
 
 class decryptor:
